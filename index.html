@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturate Function Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saturate Function Calculator</h1>
+    <form id="dataForm">
+        <label for="xValues">X Values (comma-separated):</label>
+        <input type="text" id="xValues" name="xValues" required>
+        <br><br>
+        <label for="yValues">Y Values (comma-separated):</label>
+        <input type="text" id="yValues" name="yValues" required>
+        <br><br>
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="results">
+        <p id="equation"></p>
+        <p id="correlation"></p>
+    </div>
+    <div>
+        <canvas id="scatterPlot" width="400" height="400"></canvas>
+    </div>
+    <div>
+        <canvas id="linearizedPlot" width="400" height="400"></canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
