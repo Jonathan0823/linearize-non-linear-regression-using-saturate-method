@@ -34,7 +34,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
     console.log(`1/y = ${result.intercept} + ${result.slope} * (1/x)`);
 
     const equationElement = document.getElementById('equation');
-    equationElement.textContent = `Equation: 1/y = ${result.intercept.toFixed(2)} + ${result.slope.toFixed(2)} * (1/x)`;
+    equationElement.textContent = `Equation: 1/y = ${result} + ${result.slope} * (1/x)`;
 
     // Generate the fitted line in the original scale
     const fittedY = xValues.map(x => 1 / (result.intercept + result.slope * (1 / x)));
@@ -82,7 +82,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
             plugins: {
                 title: {
                     display: true,
-                    text: `Linearized Regression: 1/y = ${result.intercept.toFixed(2)} + ${result.slope.toFixed(2)} * (1/x)`,
+                    text: `Linearized Regression: 1/y = ${result} + ${result.slope} * (1/x)`,
                     font: {
                         size: 18,
                         weight: 'bold'
